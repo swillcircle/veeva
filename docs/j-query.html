@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>JQuery</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" id="main-style-css" href="https://www.veeva.com/wp-content/themes/veeva2015/assets/css/style.css?v=4.2&amp;ver=a8918c02dd44f3ce66af79826386208c" type="text/css" media="all">
+    <link rel="stylesheet" id="main-style-css" href="https://www.veeva.com/app/themes/roots/assets/vendor/bootstrap/less/mixins/grid-framework.less" type="text/css" media="all">
+    <link rel="stylesheet" id="main-style-css" href="https://github.com/h5bp/html5-boilerplate/blob/master/dist/css/normalize.css" type="text/css" media="all">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div class="wrap" role="document">
+      <div class="content">
+        <main class="" role="main">
+          <section>
+            <section>
+              <style>
+                .banheight {
+
+                  padding-top: 60px;
+                  padding-bottom: 90px;
+                }
+
+                .banheight h2 {
+                  padding-top: 30px;
+                  font-size: 57px;
+                }
+
+                .banheight p {
+                  font-size: 30px;
+                  line-height: 36px;
+                }
+
+                @media screen and (max-width: 650px) {
+                  .banheight {
+                    padding-top: 70px;
+                    padding-bottom: 70px;
+
+                  }
+                  .banheight h2 {
+                    font-size: 40px;
+                  }
+                  .banheight p {
+                    font-size: 20px;
+                    line-height: 26px;
+                  }
+                }
+              </style>
+
+              <div class="container-full-bg banheight" style="background-image: url('https://www.veeva.com/wp-content/uploads/2017/04/roibackground.jpg');">
+                <div class="container">
+                  <div class="row">
+                    <div class="col-md-12">
+
+                      <div class="breadcrumbs">
+                        <a href="https://www.veeva.com/">Home</a> · <a href="https://www.veeva.com/products/vault-rim/">Regulatory Solutions</a> · <span class="current">Vault Submissions</span>
+                      </div>
+
+                      <h2 class=" text-center">How mature are your RIM processes?</h2>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+
+
+            <style>
+              input[type='radio'] {
+                margin-right: 10px;
+                margin-bottom: 20px;
+                float: left;
+              }
+
+              input[type='radio']:after {
+                width: 20px;
+                height: 20px;
+                border-radius: 20px;
+                top: -3px;
+                left: -3px;
+                position: relative;
+                background-color: #d0d0ce;
+                content: '';
+                display: inline-block;
+                visibility: visible;
+                border: 2px solid #d0d0ce;
+
+              }
+
+              input[type='radio']:checked:after {
+                width: 20px;
+                height: 20px;
+                border-radius: 20px;
+                top: -3px;
+                left: -3px;
+                position: relative;
+                background-color: #ff9e15;
+                content: '';
+                display: inline-block;
+                visibility: visible;
+                border: 2px solid #ff9e15;
+              }
+
+
+              .error {
+                padding-top: 10px;
+                color: red;
+                font-size: 16px;
+                line-height: 21px;
+                font-weight: 500;
+              }
+
+              .calculator-body {
+                margin-top: 0px;
+              }
+
+              .calculator-body .quiz-icon {
+                float: left;
+                margin-right: 10px;
+              }
+
+              .calculator-body p.intro {
+                font-size: 24px;
+                line-height: 32px;
+                color: #ff9e15;
+                padding-top: 15px;
+              }
+
+              .calculator-body .title {
+                font-size: 22px;
+                line-height: 30px;
+                color: #ff9e15;
+                font-weight: 500;
+                padding: 0 40px;
+              }
+
+              .calculator-body .questions {
+                font-size: 22px;
+                line-height: 28px;
+                font-weight: 400;
+
+              }
+
+              .calculator-body .questbox {}
+
+              #q-row {
+                display: table;
+                box-shadow: 6px 6px 10px 3px rgba(0, 0, 0, .2);
+                margin-bottom: 33px;
+                width: 100%;
+                margin-left: 2px;
+              }
+
+              #q-row .panel1,
+              #q-row .panel2 {
+                float: none;
+                display: table-cell;
+                vertical-align: top;
+                background-color: #f0eff0;
+                padding-top: 10px;
+                padding-bottom: 10px;
+              }
+
+              #q-row .panel1 {
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+
+                background-image: url('https://www.veeva.com//wp-content/uploads/2017/04/quiz-num-bg.png');
+
+              }
+
+              #q-row .panel2 {
+                padding-left: 25px;
+
+              }
+
+              .calculator-body .questNum {
+                font-size: 100px;
+                line-height: 110px;
+                color: #fff;
+                font-weight: 400;
+                text-align: center;
+                padding-bottom: 30px;
+                padding-top: 3px;
+              }
+
+              .calculator-body .answerspace {
+                margin-bottom: 10px;
+                clear: both;
+              }
+
+              @media screen and (max-width: 700px) {
+
+                input[type='radio'] {
+                  margin-right: 10px;
+                  margin-bottom: 30px;
+                  float: left;
+                }
+
+                .calculator-body .title {
+                  font-size: 20px;
+                  line-height: 26px;
+                  color: #ff9e15;
+                  font-weight: 400;
+                  padding: 0 0px;
+
+                }
+                .calculator-body p.intro {
+                  padding-top: 5px;
+                  text-align: center;
+                }
+                .calculator-body .quiz-icon {
+                  float: none;
+                  margin-right: 0px;
+                  display: block;
+                  margin-left: auto;
+                  margin-right: auto;
+
+                }
+                .calculator-body .questions {
+                  font-size: 19px;
+                  line-height: 24px;
+                }
+                .calculator-body .answerspace {
+                  font-size: 16px;
+                  line-height: 21px;
+
+                }
+                #q-row .panel1,
+                #q-row .panel2 {
+                  float: none;
+                  display: table-cell;
+                  vertical-align: top;
+                  background-color: #f0eff0;
+                  padding-top: 0px;
+                  padding-bottom: 10px;
+                }
+                #q-row .panel1 {
+
+                  background-position: center;
+                  background-repeat: no-repeat;
+                  background-size: cover;
+
+                  background-image: url('https://www.veeva.com//wp-content/uploads/2017/04/quiz-num-bg.png');
+                }
+                #q-row .panel2 {
+                  padding-left: 20px;
+                  padding-bottom: 20px;
+                }
+                .calculator-body .questNum {
+                  font-size: 60px;
+                  line-height: 90px;
+                  text-align: center;
+
+                }
+                .calculator-body .answerspace {}
+              }
+
+              @media screen and (max-width: 650px) {
+
+                .calculator-body .questNum {
+                  font-size: 40px;
+                  line-height: 80px;
+                  text-align: center;
+                }
+
+              }
+            </style>
+            <div class="generic-container">
+              <div class="container ">
+                <div class="wrapper">
+                  <div class="row">
+                    <div class="col-md-12">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="calculator-body">
+              <div class="container">
+                <div class="wrapper">
+                  <div class="row">
+                    <div class="col-lg-12">
+                      <img src="https://www.veeva.com/wp-content/uploads/2017/04/Quiz_icon_right.png" class="quiz-icon" alt="Quiz_icon_right">
+                      <p class="intro">
+                        Submission content planning and health authority interactions are two of the most critical capabilities in an end-to-end RIM solution. Take this 6 question quiz to assess your maturity in those areas, and discover ways to more actively manage your RIM
+                        processes overall.</p>
+                      <div class="clearfix"></div>
+                      <br>
+                      <br>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-lg-12" style="min-height:200px;position:relative;">
+
+                      <form id="form1">
+
+                        <div id="quest1">
+                          <!--  question 1 -->
+                          <div class="row" id="q-row">
+                            <div class="col-sm-2 col-xs-2 text-center panel1">
+                              <div class="questNum">1</div>
+                            </div>
+                            <div class="col-sm-12 col-xs-12 panel2">
+
+                              <p class="questions">
+                                How would you describe your process for submission forecasting and tracking?
+                              </p>
+                              <div class="row">
+                                <div class="col-md-12 answerspace"><input type="radio" value="1" name="quest1"> We forecast and track submissions through meetings and email
+                                </div>
+                                <div class="col-md-12 answerspace"><input type="radio" value="2" name="quest1"> We forecast and track submissions in spreadsheets
+                                </div>
+                                <div class="col-md-12 answerspace"><input type="radio" value="3" name="quest1"> We manage submission forecasts and trackers on a shared system and update them manually
+                                </div>
+                                <div class="col-md-12 answerspace"><input type="radio" value="4" name="quest1"> We forecast, track, and manage submissions content in a single, unified system
+                                </div>
+                              </div>
+
+                            </div>
+                          </div>
+                        </div>
+                        <!-- end question 1 -->
+
+
+                        <div id="quest2" style="display:none">
+                          <!--  question 2 -->
+                          <div class="row" id="q-row">
+                            <div class="col-sm-2 col-xs-2 text-center panel1">
+                              <div class="questNum">2</div>
+                            </div>
+                            <div class="col-sm-12 col-xs-12 panel2">
+
+                              <p class="questions">
+                                How would you describe your process for planning and tracking submission table of contents?
+                              </p>
+                              <div class="row">
+                                <div class="col-md-12 answerspace"><input type="radio" value="1" name="quest2"> We plan and track submission table of contents through meetings and email
+                                </div>
+                                <div class="col-md-12 answerspace"><input type="radio" value="2" name="quest2"> We plan and track submission table of contents through spreadsheets
+                                </div>
+                                <div class="col-md-12 answerspace"><input type="radio" value="3" name="quest2"> We manage submission table of contents in a shared system and update it manually
+                                </div>
+                                <div class="col-md-12 answerspace"><input type="radio" value="4" name="quest2"> We manage submission table of contents in a single, unified system
+                                </div>
+                              </div>
+
+                            </div>
+                          </div>
+                        </div>
+                        <!-- end question 2 -->
+
+                        <div id="quest3" style="display:none">
+                          <!--  question 3 -->
+                          <div class="row" id="q-row">
+                            <div class="col-sm-2 col-xs-2 text-center panel1">
+                              <div class="questNum">3</div>
+                            </div>
+                            <div class="col-sm-12 col-xs-12 panel2">
+
+                              <p class="questions">
+                                How would you describe your process for managing regulatory change events?
+                              </p>
+                              <div class="row">
+                                <div class="col-md-12 answerspace"><input type="radio" value="1" name="quest3"> We manage regulatory change events through meetings and email
+                                </div>
+                                <div class="col-md-12 answerspace"><input type="radio" value="2" name="quest3"> We manage regulatory change events through spreadsheets
+                                </div>
+                                <div class="col-md-12 answerspace"><input type="radio" value="3" name="quest3"> We manage regulatory change events in a shared system and update it manually
+                                </div>
+                                <div class="col-md-12 answerspace"><input type="radio" value="4" name="quest3"> We manage regulatory change events in a single, unified system
+                                </div>
+                              </div>
+
+                            </div>
+                          </div>
+                        </div>
+                        <!-- end question 3 -->
+
+                        <div id="quest4" style="display:none">
+                          <!--  question 4 -->
+                          <div class="row" id="q-row">
+                            <div class="col-sm-2 col-xs-2 text-center panel1">
+                              <div class="questNum">4</div>
+                            </div>
+                            <div class="col-sm-12 col-xs-12 panel2">
+
+                              <p class="questions">
+                                How would you describe your process for managing commitments and queries?
+                              </p>
+                              <div class="row">
+                                <div class="col-md-12 answerspace"><input type="radio" value="1" name="quest4"> We manage commitments and queries through meetings and email
+                                </div>
+                                <div class="col-md-12 answerspace"><input type="radio" value="2" name="quest4"> We manage commitments and queries through multiple logs, but there’s no consistent process
+                                </div>
+                                <div class="col-md-12 answerspace"><input type="radio" value="3" name="quest4"> We manage commitments and queries in a central log that’s related to regulatory activities and submissions
+                                </div>
+                                <div class="col-md-12 answerspace"><input type="radio" value="4" name="quest4"> We manage, index, and classify commitments and queries in a single, unified system
+                                </div>
+                              </div>
+
+                            </div>
+                          </div>
+                        </div>
+                        <!-- end question 4 -->
+
+                        <div id="quest5" style="display:none">
+                          <!--  question 5 -->
+                          <div class="row" id="q-row">
+                            <div class="col-sm-2 col-xs-2 text-center panel1">
+                              <div class="questNum">5</div>
+                            </div>
+                            <div class="col-sm-12 col-xs-12 panel2">
+
+                              <p class="questions">
+                                How would you describe your process for responding to Health Authority requests for information?
+                              </p>
+                              <div class="row">
+                                <div class="col-md-12 answerspace"><input type="radio" value="1" name="quest5"> We respond to HA requests in an ad hoc manner with no formal tracking
+                                </div>
+                                <div class="col-md-12 answerspace"><input type="radio" value="2" name="quest5"> We track HA requests and responses through multiple logs
+                                </div>
+                                <div class="col-md-12 answerspace"><input type="radio" value="3" name="quest5"> We track HA requests and responses in a central log that’s related to corresponding items
+                                </div>
+                                <div class="col-md-12 answerspace"><input type="radio" value="4" name="quest5"> We track, index, and classify HA requests and responses in a single, unified system
+                                </div>
+                              </div>
+
+                            </div>
+                          </div>
+                        </div>
+                        <!-- end question 5 -->
+
+                        <div id="quest6" style="display:none">
+                          <!--  question 6 -->
+                          <div class="row" id="q-row">
+                            <div class="col-sm-2 col-xs-2 text-center panel1">
+                              <div class="questNum">6</div>
+                            </div>
+                            <div class="col-sm-12 col-xs-12 panel2">
+
+                              <p class="questions">
+                                How do you archive and view your published output, aka dossiers?
+                              </p>
+                              <div class="row">
+                                <div class="col-md-12 answerspace"><input type="radio" value="1" name="quest6"> We have no technology in place or we use Windows Explorer and other free options
+                                </div>
+                                <div class="col-md-12 answerspace"><input type="radio" value="2" name="quest6"> We use a desktop viewer and store published output on fileshares
+                                </div>
+                                <div class="col-md-12 answerspace"><input type="radio" value="3" name="quest6"> We use the viewer that is part of our submissions publishing software
+                                </div>
+                                <div class="col-md-12 answerspace"><input type="radio" value="4" name="quest6"> We archive and view published output on a single, unified system
+                                </div>
+                              </div>
+
+                            </div>
+                          </div>
+                        </div>
+                        <!-- end question 6 -->
+
+                        <div class="text-center" id="button-calc" style="display: none;">
+                          <input type="submit" name="seeResults" value="How did you do?" class="button theme-color">
+                        </div>
+                        <div class="text-center" id="quiz-results" style="display: none;">
+                          <p>Based on your Answers</p>
+                          <p id="grade2"></p>
+                          <input type="submit" value="Start Over" class="button theme-color">
+                        </div>
+                      </form>
+                      <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+                    </div>
+                  </div>
+                  <br><br>
+                </div>
+              </div>
+            </div>
+          </section>
+        </main>
+      </div>
+    </div>
+
+  </body>
+  <script>
+    $(document).ready(function() {
+      $('#calc-form').trigger("reset");
+
+      $("input[name='quest1']").click(function() {
+        $("#quest1").hide('slow');
+        $("#quest2").show("slow");
+      });
+      $("input[name='quest2']").click(function() {
+        $("#quest2").hide('slow');
+        $("#quest3").show('slow');
+      });
+      $("input[name='quest3']").click(function() {
+        $("#quest3").hide('slow');
+        $("#quest4").show('slow');
+      });
+      $("input[name='quest4']").click(function() {
+        $("#quest4").hide('slow');
+        $("#quest5").show('slow');
+      });
+      $("input[name='quest5']").click(function() {
+        $("#quest5").hide('slow');
+        $("#quest6").show('slow');
+      });
+      $("input[name='quest6']").click(function() {
+        $("#quest6").hide('slow');
+        $("#button-calc").show('slow');
+      });
+
+      $("#button-calc").click(function() {
+        $("#button-calc").fadeOut('fast');
+        $("#quiz-results").fadeIn('slow');
+      });
+    });
+  </script>
+  <script>
+
+  document.getElementById("button-calc").onclick=function() {
+    question1 = parseInt(document.querySelector('input[name = "quest1"]:checked').value);
+    question2 = parseInt(document.querySelector('input[name = "quest2"]:checked').value);
+    question3 = parseInt(document.querySelector('input[name = "quest3"]:checked').value);
+    question4 = parseInt(document.querySelector('input[name = "quest4"]:checked').value);
+    question5 = parseInt(document.querySelector('input[name = "quest5"]:checked').value);
+    question6 = parseInt(document.querySelector('input[name = "quest6"]:checked').value);
+
+
+    result = question1 + question2 + question3 + question4 + question5 + question6;
+
+
+    if (result <= 10) {result2 = "You have an opportunity to more actively manage your regulatory processes. To read why it’s important to organize processes like submission content planning and health authority interactions within a single, unified system rather than integrating a patchwork of applications, click here"};
+    if ((result >= 11) && (result <= 15)) {result2 = "You have some systems in place, but you still have an opportunity to more actively manage your regulatory processes. To hear how TESARO manages health authority correspondence and commitments on one platform that’s utilized by multiple teams, click here."};
+    if ((result >= 16) && (result <= 20)) {result2 = "You have a shared system in place, but you still have an opportunity to more actively manage your regulatory processes. To watch how IONIS and United Therapeutics leveraged an end-to-end RIM solution to improve submission management, health authority interactions, and reporting, click here"};
+    if (result >= 21) {result2 = "You have a unified system in place, but you still have an opportunity to more actively manage your regulatory processes. To read how a biopharmaceutical firm leveraged submission content planning and continuous publishing to cut their submission development time in half, click here."};
+    document.getElementById("grade2").innerHTML = result2;
+
+
+
+  return false; // required to not refresh the page; just leave this here
+  } //this ends the submit function
+
+  </script>
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0 !important;
+    }
+  </style>
+  <footer class="content-info" role="contentinfo">
+    <div class="veeva-footer">
+      <div class="container">
+        <div class="row hidden-print">
+          <div class="col-xs-12  col-sm-4 col-md-5ths">
+            <a href="https://www.veeva.com/"><img src="https://www.veeva.com/wp-content/uploads/2018/10/footer-logo.png" alt="footer-logo" style="margin-bottom:20px;" width="138" height="33"></a>
+          </div>
+          <div class="col-xs-6 col-sm-4 col-md-5ths" style="font-weight:600;">
+            <a href="https://www.veeva.com/products/vault-clinical/">Clinical Solutions</a><br>
+            <a href="https://www.veeva.com/products/vault-rim/">Regulatory Solutions</a><br>
+            <a href="https://www.veeva.com/products/vault-quality/">Quality Solutions</a><br>
+            <a href="https://www.veeva.com/products/medical-suite/">Medical Solutions</a><br>
+            <a href="https://www.veeva.com/products/commercial-cloud/">Commercial Solutions</a><br>
+            <a href="https://www.veeva.com/products/pharma-biotech/">Industry Segments</a><br>
+            <a href="https://www.veeva.com/services/">Services</a><br><br>
+          </div>
+          <div class="col-xs-6 col-sm-4 col-md-5ths">
+            <div><a href="https://www.veeva.com/customers/">Customers</a></div>
+            <div><a href="https://www.veeva.com/resources/">Resources</a></div>
+            <div><a href="https://www.veeva.com/events/">Events</a></div>
+            <div><a href="https://www.veeva.com/meet-veeva/careers/">Careers</a></div>
+            <div><a href="https://www.veeva.com/sitemap/">Site Map</a></div>
+            <div><a href="https://www.veeva.com/contact-us/">Contact</a></div>
+          </div>
+          <div class="visible-sm visible-xs col-sm-4" style="clear:both"></div>
+          <div class="col-xs-12 col-sm-8 col-md-5ths">
+            <div class="row">
+              <div class="col-xs-6 col-sm-6 col-md-12">
+                <div style="font-weight:500"><a href="https://www.veeva.com/contact-us/">Contact Sales</a></div>
+                <div style="line-height:24px;margin-bottom:20px;">
+                  <div>+1 866-417-3024</div>
+                  <div>+1 925-348-9355</div>
+                </div>
+              </div>
+              <div class="col-xs-6 col-sm-6 col-md-12">
+                <div style="font-weight:500">Global Headquarters</div>
+                <div style="line-height:24px;">
+                  <div>Veeva Systems Inc.</div>
+                  <div>4280 Hacienda Drive</div>
+                  <div>Pleasanton, CA 94588</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="visible-sm visible-xs col-sm-4" style="clear:both"></div>
+          <div class="col-xs-6 col-sm-8 col-md-5ths social">
+            <div style="font-weight:500">Follow us on Social</div>
+            <a href="https://www.facebook.com/veevasystems" target="_blank"><img src="https://www.veeva.com/wp-content/uploads/2018/10/social-icons-fb.png" width="29" height="29"></a>
+            <a href="https://www.linkedin.com/company/veeva-systems" target="_blank"><img src="https://www.veeva.com/wp-content/uploads/2018/10/social-icons-li.png" width="29" height="29"></a>
+            <a href="https://www.youtube.com/user/VeevaSystems" target="_blank"><img src="https://www.veeva.com/wp-content/uploads/2018/10/social-icons-yt.png" width="29" height="29"></a>
+            <a href="http://www.twitter.com/veevasystems" target="_blank"><img src="https://www.veeva.com/wp-content/uploads/2018/10/social-icons-tw.png" width="29" height="29"></a>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12 text-center" style="line-height:24px;">
+            <div class="footer-btm">
+              Veeva Systems - Cloud-based Software for the Global Life Sciences Industry | © Copyright 2019 Veeva Systems |
+              <a href="https://www.veeva.com/privacy/" style="color:#db6015">Privacy Statement</a> | <a href="https://www.veeva.com/terms/" style="color:#db6015">Terms</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Main</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" id="main-style-css" href="https://www.veeva.com/wp-content/themes/veeva2015/assets/css/style.css?v=4.2&amp;ver=a8918c02dd44f3ce66af79826386208c" type="text/css" media="all">
+    <link rel="stylesheet" id="main-style-css" href="https://www.veeva.com/app/themes/roots/assets/vendor/bootstrap/less/mixins/grid-framework.less" type="text/css" media="all">
+    <link rel="stylesheet" id="main-style-css" href="https://github.com/h5bp/html5-boilerplate/blob/master/dist/css/normalize.css" type="text/css" media="all">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="content">
+        <main class="veeva-lp-hero">
+          <div class="svg-container">
+            <svg xmlns="http://www.w3.org/2000/svg" width="300" height="304" viewBox="0 0 300 304">
+              <g fill="none" fill-rule="evenodd">
+                <polygon fill="#F7981D" points="243.377 0 149.67 190.044 56.011 0 .002 0 149.89 303.637 299.179 0"/>
+                <path fill="#88898D" d="M82.2498995,0.524992574 L149.685075,137.128755 L217.032814,0.524992574 C217.032814,0.524992574 82.2498995,0.331725248 82.2498995,0.524992574"/>
+              </g>
+            </svg>
+          </div>
+          <div class="row link-container">
+            <div class="col-sm-6 textlink link-1">
+              <a href="design.html">Design</a>
+            </div>
+            <div class="col-sm-6 textlink link-2">
+              <a href="j-query.html">JQuery</a>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+  </body>
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0 !important;
+    }
+    .veeva-lp-hero {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    .link-1,
+    .link-2  {
+      margin: 18px 0;
+      text-align: center;
+    }
+    .textlink a {
+      color:#F7981D;
+    }
+    .textlink::after {
+      content: "";
+      font-size: 0;
+      margin-left: 8px;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 6px 0 6px 6px;
+      border-color: transparent transparent transparent #F7981D;
+      vertical-align: bottom;
+    }
+    .svg-container svg{
+      width: 100%;
+    }
+
+    @media (min-width: 768px) {
+    .link-1 {
+      text-align: right;
+    }
+    .link-2 {
+      text-align: left;
+    }
+    }
+  </style>
+</html>
